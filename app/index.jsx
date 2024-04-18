@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Image, ScrollView, Text, View } from 'react-native';
+import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { images } from "../constants"
 import CustomButton from '../components/CustomButton';
@@ -49,6 +49,11 @@ export default function App() {
             handlePress={() => router.push("/sign-in")}
             containerStyles="w-full mt-7"
           />
+          <CustomButton
+            title="Home"
+            handlePress={() => router.push("/profile")}
+            containerStyles="w-full mt-7"
+          />
         </View>
       </ScrollView>
 
@@ -57,3 +62,4 @@ export default function App() {
   );
 }
 
+const styles = StyleSheet.create({})
